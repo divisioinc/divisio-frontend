@@ -6,7 +6,7 @@ module.exports = function override(config, env) {
   // eslint-disable-next-line no-param-reassign
   config = rewireAliases.aliasesOptions({
     '@': path.resolve(__dirname, `${paths.appSrc}/`),
-    '@assets': path.resolve(__dirname, `${paths.appSrc}/assets/`)
+    '@assets': path.resolve(__dirname, `${paths.appSrc}/assets/`),
   })(config, env)
   return config
 }
