@@ -8,7 +8,9 @@
     "test:watch": "react-app-rewired test",
     "deploy": "npm-run-all --parallel lint prettier build",
     "lint": "eslint --ignore-path .gitignore --ext .js .",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\""
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "husky": {
     "hooks": {
@@ -17,6 +19,7 @@
   },
   "lint-staged": {
     "src/**/*.js": [
+      "yarn prettier",
       "yarn lint"
     ]
   },
@@ -26,6 +29,14 @@
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-actions": "^6.0.19",
+    "@storybook/addon-essentials": "^6.0.19",
+    "@storybook/addon-links": "^6.0.19",
+    "@storybook/node-logger": "^6.0.19",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.19",
+    "babel-loader": "^8.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -39,7 +50,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "react-app-rewire-aliases": "^0.2.0",
-    "react-app-rewired": "^2.1.5"
+    "react-app-rewired": "^2.1.5",
+    "react-is": "^16.13.1"
   },
   "browserslist": [
     ">0.2%",
