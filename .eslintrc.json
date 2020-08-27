@@ -29,12 +29,15 @@
     "react/forbid-prop-types": "off",
     "react/require-default-props": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-array-index-key": "off",
+    "react/jsx-props-no-spreading": "off",
     "linebreak-style": "off",
-    "react/jsx-one-expression-per-line": [1, { "allow": "literal" }],
+    "react/jsx-one-expression-per-line": "off",
     "camelcase": "off",
     "global-require": "off",
     "no-shadow": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-wrap-multilines": "off"
   }
 }
